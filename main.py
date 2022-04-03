@@ -573,10 +573,10 @@ async def counter(websocket, path):
         await unregister(GAMEID, UUID)
 
 
-ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
-crtfile = pathlib.Path('server.crt')
-keyfile = pathlib.Path('server.pem')
-ssl_context.load_cert_chain(crtfile, keyfile=keyfile)
+#ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
+#crtfile = pathlib.Path('server.crt')
+#keyfile = pathlib.Path('server.pem')
+#ssl_context.load_cert_chain(crtfile, keyfile=keyfile)
 
 # start_server = websockets.serve(counter, "0.0.0.0", 8765, ssl=ssl_context)
 start_server = websockets.serve(counter, "0.0.0.0", 8765)
