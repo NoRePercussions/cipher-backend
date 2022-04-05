@@ -579,6 +579,6 @@ async def counter(websocket, path):
 #ssl_context.load_cert_chain(crtfile, keyfile=keyfile)
 
 # start_server = websockets.serve(counter, "0.0.0.0", 8765, ssl=ssl_context)
-start_server = websockets.serve(counter, "0.0.0.0", 8765)
+start_server = websockets.serve(counter, "0.0.0.0", 80)
 
 asyncio.get_event_loop().run_until_complete(start_server)
